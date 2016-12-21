@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@mipmap/ic_assignment_black_24dp"
+            android:title="Dash Board" />
+        <item
+            android:id="@+id/nav_collectMoney"
+            android:icon="@mipmap/ic_monetization_on_black_24dp"
+            android:title="Collect Money" />
+        <item
+            android:id="@+id/nav_transactionHistory"
+            android:icon="@mipmap/ic_history_black_24dp"
+            android:title="Transaction History" />
+        <item
+            android:id="@+id/nav_comissions"
+            android:icon="@mipmap/ic_account_balance_wallet_black_24dp"
+            android:title="Comissions" />
+        <item
+            android:id="@+id/nav_paymentReversal"
+            android:icon="@mipmap/ic_cached_black_24dp"
+            android:title="Payment Reversal" />
+        <item
+            android:id="@+id/nav_addUser"
+            android:icon="@mipmap/ic_person_add_black_24dp"
+            android:title="Add User" />
+        <item
+            android:id="@+id/nav_offers"
+            android:icon="@mipmap/ic_card_giftcard_black_24dp"
+            android:title="Offers" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@mipmap/ic_headset_mic_black_24dp"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_rateApplication"
+            android:icon="@mipmap/ic_star_border_black_24dp"
+            android:title="Rate Application" />
+    </group>
+
+</menu>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dashboard_main_layout_height"
+        android:layout_marginTop="21dp"
+        android:layout_margin="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:id="@+id/dashboard_main_item"
+        >
+
+        <ImageView
+            android:id="@+id/dashboard_user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_menu_camera"
+            android:layout_above="@+id/dashboard_user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/camera_margin_bottom" />
+
+        <TextView
+            android:id="@+id/dashboard_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColor="@color/dashboard_bold_text"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transactions processed"
+            android:textSize="10dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_below="@+id/dashboard_user_name"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:layout_toStartOf="@+id/dashboard_user_name"
+            android:layout_toLeftOf="@+id/dashboard_user_name" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="21dp"
+            android:text="Amount"
+            android:textSize="20dp"
+            android:shadowColor="@color/dashboard_bold_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignEnd="@+id/textView4" />
+
+        <TextView
+            android:layout_width="4dp"
+            android:layout_height="80dp"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:background="@color/grey"
+            ></TextView>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Comission Received"
+            android:textSize="10dp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_toRightOf="@+id/dashboard_user_image"
+            android:layout_toEndOf="@+id/dashboard_user_image" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/textView6"
+            android:layout_alignLeft="@+id/textView6"
+            android:layout_alignRight="@+id/textView6"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_alignTop="@+id/textView5"
+            android:text="Amount"
+            android:textSize="20dp"
+            android:shadowColor="@color/dashboard_bold_text"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_balance"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dashboard_listitem_height"
+        android:orientation="horizontal"
+        android:layout_below="@+id/dashboard_main_item"
+        android:layout_alignLeft="@+id/dashboard_main_item"
+        android:layout_alignStart="@+id/dashboard_main_item"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        ></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_collection"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dashboard_listitem_height"
+        android:orientation="horizontal"
+        android:layout_below="@+id/dashboard_balance"
+        android:layout_alignLeft="@+id/dashboard_balance"
+        android:layout_alignStart="@+id/dashboard_balance"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        ></LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_comission"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dashboard_listitem_height"
+        android:orientation="horizontal"
+        android:layout_below="@+id/dashboard_collection"
+        android:layout_alignLeft="@+id/dashboard_balance"
+        android:layout_alignStart="@+id/dashboard_balance"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        ></LinearLayout>
+
+
+</RelativeLayout>

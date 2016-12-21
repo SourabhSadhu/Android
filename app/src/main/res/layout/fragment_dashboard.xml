@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dashboard_main_layout_height"
+        android:layout_marginTop="21dp"
+        android:layout_margin="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/white"
+        android:id="@+id/dashboard_main_item"
+        >
+
+        <ImageView
+            android:id="@+id/dashboard_user_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_menu_camera"
+            android:layout_above="@+id/dashboard_user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/camera_margin_bottom" />
+
+        <TextView
+            android:id="@+id/dashboard_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="@color/dashboard_bold_text"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transactions processed"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:layout_below="@+id/dashboard_user_name"
+            android:layout_toLeftOf="@+id/view"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="21dp"
+            android:text="Amount"
+            android:textSize="20dp"
+            android:shadowColor="@color/dashboard_bold_text"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_alignRight="@+id/textView4"
+            android:layout_alignEnd="@+id/textView4" />
+
+        <LinearLayout
+            android:layout_width="4dp"
+            android:layout_height="100dp"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/view"
+            android:orientation="vertical"
+            android:background="@color/grey"
+            ></LinearLayout>
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Comission Received"
+            android:textSize="15dp"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:layout_alignTop="@+id/textView4"
+            android:layout_toRightOf="@+id/view"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_alignEnd="@+id/textView6"
+            android:layout_alignLeft="@+id/textView6"
+            android:layout_alignRight="@+id/textView6"
+            android:layout_alignStart="@+id/textView6"
+            android:layout_alignTop="@+id/textView5"
+            android:text="Amount"
+            android:textSize="20dp"
+            android:shadowColor="@color/dashboard_bold_text"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_balance"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dashboard_listitem_height"
+        android:orientation="horizontal"
+        android:layout_below="@+id/dashboard_main_item"
+        android:layout_alignLeft="@+id/dashboard_main_item"
+        android:layout_alignStart="@+id/dashboard_main_item"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@mipmap/dashboard_bankbalance"
+            />
+        <View
+
+            android:layout_marginTop="6dp"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:background="@color/grey"
+            />
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Bank Balance"
+                android:shadowColor="@color/colorPrimary"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:shadowColor="@color/dashboard_bold_text"
+                android:textStyle="bold"
+                android:text="dashboard_bank_balance"
+                android:id="@+id/dashboard_bank_balance"
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/dashboard_arrow"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_collection"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dashboard_listitem_height"
+        android:orientation="horizontal"
+        android:layout_below="@+id/dashboard_balance"
+        android:layout_alignLeft="@+id/dashboard_balance"
+        android:layout_alignStart="@+id/dashboard_balance"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@mipmap/dashboard_collection"
+            />
+        <View
+
+            android:layout_marginTop="6dp"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:background="@color/grey"
+            />
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Bank Balance"
+                android:shadowColor="@color/colorPrimary"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:shadowColor="@color/dashboard_bold_text"
+                android:textStyle="bold"
+                android:text="dashboard_collection_amt"
+                android:id="@+id/dashboard_collection_amt"
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/dashboard_arrow"
+            android:layout_marginRight="10dp"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dashboard_comission"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dashboard_listitem_height"
+        android:orientation="horizontal"
+        android:layout_below="@+id/dashboard_collection"
+        android:layout_alignLeft="@+id/dashboard_balance"
+        android:layout_alignStart="@+id/dashboard_balance"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@color/white"
+        >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@mipmap/dashboard_comission"
+            />
+        <View
+
+            android:layout_marginTop="6dp"
+            android:layout_width="2dp"
+            android:layout_height="50dp"
+            android:background="@color/grey"
+            />
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Bank Balance"
+                android:shadowColor="@color/colorPrimary"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:shadowColor="@color/dashboard_bold_text"
+                android:textStyle="bold"
+                android:text="dashboard_comission_amt"
+                android:id="@+id/dashboard_comission_amt"
+                />
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@mipmap/dashboard_arrow"
+            android:layout_marginRight="10dp"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
