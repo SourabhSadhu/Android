@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/relative_login">
+
+    <View
+        android:id="@+id/login_back"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:background="@drawable/login_button"/>
+
+    <EditText
+        android:id="@+id/email_or_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Email or Mobile Number"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/login_back"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:gravity="center"
+        android:inputType="textWebPassword"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/email_or_mobile"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>
